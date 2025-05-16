@@ -58,8 +58,8 @@ mixin _$StacSnackBar {
             (identical(other.padding, padding) || other.padding == padding) &&
             (identical(other.width, width) || other.width == width) &&
             (identical(other.shape, shape) || other.shape == shape) &&
-            (identical(other.hitTestBehavior, hitTestBehavior) ||
-                other.hitTestBehavior == hitTestBehavior) &&
+            const DeepCollectionEquality()
+                .equals(other.hitTestBehavior, hitTestBehavior) &&
             (identical(other.behavior, behavior) ||
                 other.behavior == behavior) &&
             (identical(other.action, action) || other.action == action) &&
@@ -90,7 +90,7 @@ mixin _$StacSnackBar {
       padding,
       width,
       shape,
-      hitTestBehavior,
+      const DeepCollectionEquality().hash(hitTestBehavior),
       behavior,
       action,
       actionOverflowThreshold,
@@ -414,8 +414,8 @@ class _StacSnackBar implements StacSnackBar {
             (identical(other.padding, padding) || other.padding == padding) &&
             (identical(other.width, width) || other.width == width) &&
             (identical(other.shape, shape) || other.shape == shape) &&
-            (identical(other.hitTestBehavior, hitTestBehavior) ||
-                other.hitTestBehavior == hitTestBehavior) &&
+            const DeepCollectionEquality()
+                .equals(other.hitTestBehavior, hitTestBehavior) &&
             (identical(other.behavior, behavior) ||
                 other.behavior == behavior) &&
             (identical(other.action, action) || other.action == action) &&
@@ -447,7 +447,7 @@ class _StacSnackBar implements StacSnackBar {
       padding,
       width,
       shape,
-      hitTestBehavior,
+      const DeepCollectionEquality().hash(hitTestBehavior),
       behavior,
       action,
       actionOverflowThreshold,
